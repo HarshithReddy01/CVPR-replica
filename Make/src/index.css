@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Exo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 17px;
+  color: #212529;
+  margin: 0;
+  padding: 0;
+}
+
+@layer components {
+  .nav-link-item {
+    @apply text-sm px-2 py-1 hover:text-gray-300 whitespace-nowrap transition-colors;
+    color: #c8c8c8;
+  }
+
+  .sub-nav-link {
+    @apply text-sm text-gray-700 px-2 py-1 hover:text-gray-900 hover:bg-gray-200 whitespace-nowrap rounded transition-colors;
+  }
+
+  .dropdown-menu {
+    @apply absolute top-full left-0 z-50 bg-gray-800 text-white min-w-max shadow-lg rounded-b border-t border-gray-600;
+  }
+
+  .sub-dropdown-menu {
+    @apply absolute top-full left-0 z-50 bg-white text-gray-800 min-w-max shadow-lg rounded border border-gray-200;
+  }
+
+  .btn-success {
+    @apply inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded text-sm transition-colors;
+  }
+
+  .btn-primary {
+    @apply inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded text-sm transition-colors;
+  }
+
+  .btn-outline-primary {
+    @apply inline-block border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold px-4 py-2 rounded text-sm transition-colors;
+  }
+
+  .announcement-date {
+    @apply font-bold text-gray-800;
+  }
+
+  .date-past {
+    @apply text-gray-400 line-through;
+  }
+
+  .date-upcoming {
+    @apply text-gray-800 font-medium;
+  }
+
+  .date-active {
+    @apply text-green-700 font-semibold;
+  }
+
+  .section-heading {
+    @apply text-base font-bold border-b border-gray-300 pb-1 mb-3;
+  }
+
+  .countdown-box {
+    @apply bg-gray-100 rounded px-2 py-0.5 text-xs font-mono text-gray-600 inline-block;
+  }
+}
+
+.blink {
+  animation: blink 1.3s steps(5, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
