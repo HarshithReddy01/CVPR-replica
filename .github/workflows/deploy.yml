@@ -31,6 +31,9 @@ jobs:
           npm ci
           npm run build
 
+      - name: Fix SPA 404 (copy index.html to 404.html)
+        run: cp Make/dist/index.html Make/dist/404.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

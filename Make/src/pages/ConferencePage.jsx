@@ -296,7 +296,7 @@ function ConferenceImage() {
   return (
     <div className="rounded overflow-hidden" style={{ width: 390, maxWidth: '100%' }}>
       <img
-        src="/image.png"
+        src={`${import.meta.env.BASE_URL}image.png`}
         alt="Denver Skyline - CVPR 2026 June 3-7"
         className="w-full object-cover rounded"
         style={{ maxHeight: 260, minHeight: 200 }}

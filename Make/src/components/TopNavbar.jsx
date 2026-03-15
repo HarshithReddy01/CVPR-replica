@@ -83,7 +83,7 @@ export default function TopNavbar() {
 
         <div className="flex items-center gap-3">
           <Link to="/" aria-label="Home" className="flex flex-col items-start leading-none">
-            <img src="/cvpr-logo.svg" alt="CVPR 2026" height="40" style={{ height: 40 }} />
+            <img src={`${import.meta.env.BASE_URL}cvpr-logo.svg`} alt="CVPR 2026" height="40" style={{ height: 40 }} />
             <div className="hidden md:flex items-center justify-between w-full" style={{ marginTop: -14, paddingRight: 6 }}>
               <span style={{ fontSize: 6.5, color: '#fff', letterSpacing: '0.08em', fontWeight: 600 }}>JUNE 3-7, 2026</span>
               <span style={{ fontSize: 10, color: '#fff', letterSpacing: '0.08em', fontWeight: 600, marginRight: -4 }}>COLORADO</span>
